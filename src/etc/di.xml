@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * A small module to filter territories from region dropdowns.
+ *
+ * @author    Peter McWilliams <pmcwilliams@augustash.com>
+ * @copyright 2020 August Ash, Inc. (https://www.augustash.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Directory\Model\ResourceModel\Region\Collection">
+        <plugin name="directory-region-filter" type="Augustash\RegionFilter\Plugin\RemoveTerritoriesFromOptionsPlugin"/>
+    </type>
+</config>

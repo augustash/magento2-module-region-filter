@@ -1,0 +1,23 @@
+{
+    "name": "augustash/module-region-filter",
+    "type": "magento2-module",
+    "description": "Magento 2 Region Filter Module",
+    "version": "1.0.0",
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "magento/module-directory": "*"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Augustash\\RegionFilter\\": "src/"
+        },
+        "files": [
+            "src/registration.php"
+        ]
+    }
+}
