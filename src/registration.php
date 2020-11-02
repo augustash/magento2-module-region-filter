@@ -1,7 +1,7 @@
 <?php
 
 /**
- * A small module to filter territories from region dropdowns.
+ * A small module to filter regions from forms.
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
  * @copyright 2020 August Ash, Inc. (https://www.augustash.com)
