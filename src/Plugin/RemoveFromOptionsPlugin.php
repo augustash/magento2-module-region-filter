@@ -4,7 +4,7 @@
  * A small module to filter regions from forms.
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright 2020 August Ash, Inc. (https://www.augustash.com)
+ * @copyright 2022 August Ash, Inc. (https://www.augustash.com)
  */
 
 namespace Augustash\RegionFilter\Plugin;
@@ -25,11 +25,11 @@ class RemoveFromOptionsPlugin extends AbstractPlugin
      */
     public function afterToOptionArray(SubjectClass $subject, array $options): array
     {
-        $results = array_filter(
+        $results = \array_filter(
             $options,
             function ($option) {
                 if (isset($option['label'])) {
-                    return !in_array($option['label'], $this->disallowed);
+                    return !\in_array($option['label'], $this->disallowed);
                 }
                 return true;
             }
