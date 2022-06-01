@@ -4,7 +4,7 @@
  * A small module to filter regions from forms.
  *
  * @author    Peter McWilliams <pmcwilliams@augustash.com>
- * @copyright 2020 August Ash, Inc. (https://www.augustash.com)
+ * @copyright 2022 August Ash, Inc. (https://www.augustash.com)
  */
 
 namespace Augustash\RegionFilter\Plugin;
@@ -25,11 +25,11 @@ class RemoveFromHelperJsonPlugin extends AbstractPlugin
      */
     public function afterGetRegionData(SubjectClass $subject, array $regions): array
     {
-        $results = array_filter(
+        $results = \array_filter(
             $regions['US'],
             function ($option) {
                 if (isset($option['name'])) {
-                    return !in_array($option['name'], $this->disallowed);
+                    return !\in_array($option['name'], $this->disallowed);
                 }
                 return true;
             }

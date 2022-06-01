@@ -16,7 +16,7 @@ Install the extension using Composer using our development package repository:
 
 ```bash
 composer config repositories.augustash composer https://augustash.repo.repman.io
-composer require augustash/module-region-filter:~1.0.1
+composer require augustash/module-region-filter:~1.0.2
 bin/magento module:enable --clear-static-content Augustash_RegionFilter
 bin/magento setup:upgrade
 bin/magento cache:flush
@@ -36,4 +36,4 @@ bin/magento cache:flush
 
 ## Structure
 
-[Typical file structure for a Magento 2 module](http://devdocs.magento.com/guides/v2.3/extension-dev-guide/build/module-file-structure.html).
+[Typical file structure for a Magento 2 module](http://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/module-file-structure.html).
